@@ -57,9 +57,9 @@
 			   {if
                   {exists song.lbl}
 			      {if_else {&& {modifier_mgr is_modifier_active mod_auto_play} {!= $speedmod 1.0}}
-				  {song.lbl set_token_fmt {sprint {{song_mgr get_meta_data {meta_performer song}} title} " (" {int {'+' 0.5 {'*' $speedmod 100}}} "%)" "\nAUTOPLAY"}}
+				  {song.lbl set_token_fmt {sprint {{song_mgr get_meta_data {meta_performer song}} title} " (" {int {'+' 0.5 {'*' $speedmod 100}}} "%)" "\nJURGEN IS NO LONGER HERE"}}
 				  {if_else {modifier_mgr is_modifier_active mod_auto_play}
-				  {song.lbl set_token_fmt {sprint {{song_mgr get_meta_data {meta_performer song}} title} "\nAUTOPLAY"}}
+				  {song.lbl set_token_fmt {sprint {{song_mgr get_meta_data {meta_performer song}} title} "\nJURGEN IS NO LONGER HERE"}}
 				  {if_else {!= $speedmod 1.0}
 				  {song.lbl set_token_fmt {sprint {{song_mgr get_meta_data {meta_performer song}} title} " (" {int {'+' 0.5 {'*' $speedmod 100}}} "%)"}}
 				  {song.lbl set_song_name $short_name}}}}}
