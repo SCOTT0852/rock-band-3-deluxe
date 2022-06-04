@@ -17,4 +17,6 @@
    (mod_nocrowd)
 ;   (mod_nomuting)
    (mod_nosustain)
-   (mod_rb2sustain default_enabled))
+   (mod_rb2sustain default_enabled)
+   (mod_songselectnoise))
+
