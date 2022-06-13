@@ -19,3 +19,6 @@
    (mod_nosustain)
    (mod_rb2sustain default_enabled)
    (mod_songselectnoise))
+   (mod_xboxos)
+   (mod_ps3os)
+   (mod_wiios))
