@@ -5,7 +5,7 @@
 {set $screensaver TRUE}
 {set $gotcha TRUE}
 {set $trackspeed 1.0}
-{set $emulatefps 30}
+{set $emulatefps 60}
 {set $slot1_color 1}
 {set $slot2_color 4}
 {set $slot3_color 2}
