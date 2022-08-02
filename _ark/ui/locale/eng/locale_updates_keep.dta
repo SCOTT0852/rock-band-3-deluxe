@@ -385,11 +385,11 @@
    "Tweaks")
 (dlc_store "Set Speeds")
 (redeem_code "Set Venue FPS")
-(message_motd "Rock Band 3 Deluxe devbuild Loaded! Thanks for playing!")
+(message_motd "LEGO Rock Band Deluxe loaded! Thanks for playing!")
 (video_01
    "Music Video 1")
 (random
-   "No Venue Forced")
+   "Random")
 (video_02
    "Music Video 2")
 (video_03
@@ -907,7 +907,7 @@
 (audition_main_title
    "Audition Mode")
 (audition_main_welcome
-   "In order to audition your songs, you need to run Magma on your PC. If you don't have Magma, you can download it at http://creators.rockband.com.")
+   "In order to audition your songs, you need to run patched Magma on your PC. If you don't have Magma, google it or something idk.")
 (audition_main_song_ready
    "Song Loaded")
 (audition_main_network_idling
