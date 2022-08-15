@@ -21,9 +21,7 @@
    (mod_songselectnoise)
    (mod_xboxos)
    (mod_ps3os)
+<<<<<<< HEAD
    (mod_wiios default_enabled)
-   (mod_rb4ui)
-   ;(mod_animatedgems)
-   (mod_starlightsmashers)
-   (mod_shinysmashers)
    (mod_animatedhighway))
+   (mod_rb4ui))
