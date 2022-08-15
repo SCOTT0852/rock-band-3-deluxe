@@ -21,7 +21,5 @@
    (mod_songselectnoise)
    (mod_xboxos)
    (mod_ps3os)
-<<<<<<< HEAD
    (mod_wiios default_enabled)
-   (mod_animatedhighway))
    (mod_rb4ui))
