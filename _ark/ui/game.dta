@@ -198,6 +198,7 @@
 ((disable_screen_saver TRUE)
    PAUSE_ON_MIC_DISCONNECT
    (enter
+      ;{unless $fakebrutalmode {coop_track_panel2 exit}}
       {if_else
          {modifier_mgr is_modifier_active mod_auto_play}
          {do

@@ -22,4 +22,6 @@
    (mod_xboxos)
    (mod_ps3os)
    (mod_wiios default_enabled)
-   (mod_rb4ui))
+   (mod_rb4ui)
+   (mod_enablebre)
+   (mod_practiceoverdrive))
