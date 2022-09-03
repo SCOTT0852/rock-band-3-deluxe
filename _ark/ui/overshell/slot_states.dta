@@ -2761,6 +2761,32 @@
                   {set $ididthisalready FALSE}
                   {set $rb4ui {! $rb4ui}}
                   {overshell update_all})
+<<<<<<< HEAD
+=======
+               (mod_transgems
+                  {modifier_mgr toggle_modifier_enabled mod_transgems}
+                  {set $transgems {! $transgems}}
+                  {set $slot1_color 3}
+                  {set $slot2_color 1}
+                  {set $slot3_color 2}
+                  {set $slot4_color 1}
+                  {set $slot5_color 3}
+                  {set $fret1_color 3}
+                  {set $fret2_color 1}
+                  {set $fret3_color 2}
+                  {set $fret4_color 1}
+                  {set $fret5_color 3}
+                  {set $sus1_color 3}
+                  {set $sus2_color 1}
+                  {set $sus3_color 2}
+                  {set $sus4_color 1}
+                  {set $sus5_color 3}
+                  {overshell update_all})
+               (mod_rb2smashers
+                  {modifier_mgr toggle_modifier_enabled mod_rb2smashers}
+                  {set $rb2smashers {! $rb2smashers}}
+                  {overshell update_all})
+>>>>>>> 979fdba1 (trans gems update and rb2 smasher mod)
                (mod_shinysmashers
                   {modifier_mgr toggle_modifier_enabled mod_shinysmashers}
                   {if {modifier_mgr is_modifier_active mod_starlightsmashers}

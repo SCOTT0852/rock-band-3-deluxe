@@ -23,6 +23,8 @@
    (mod_ps3os)
    (mod_wiios default_enabled)
    (mod_rb4ui)
+   (mod_transgems)
+   (mod_rb2smashers)
    (mod_enablebre)
    (mod_practiceoverdrive)
    (mod_nolanes)

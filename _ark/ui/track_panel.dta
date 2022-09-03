@@ -235,6 +235,29 @@ highframe55.tex highframe56.tex highframe57.tex highframe58.tex highframe59.tex 
       {square_smasher_bright_blue.tex set_bitmap ui/track/custom_track_textures/square_smasher_bright_blue.png}
       {square_smasher_bright_orange.tex set_bitmap ui/track/custom_track_textures/square_smasher_bright_orange.png}}
 
+{if $rb2smashers
+      {if {|| {$user get_track_type} kTrackGuitar kTrackBass kTrackKeys} {gem_smashers_guitar_nomip.tex set_bitmap ui/track/custom_track_textures/gem_smashers_guitar_rb2.png}}
+      {if {|| {$user get_track_type} kTrackGuitar kTrackBass kTrackKeys} {gem_smashers_guitar.tex set_bitmap ui/track/custom_track_textures/gem_smashers_guitar_rb2.png}}
+      {if {== {$user get_track_type} kTrackDrum} {gem_smashers_drum_nomip.tex set_bitmap ui/track/custom_track_textures/gem_smashers_drum_rb2_nomip.png}}
+      {if {== {$user get_track_type} kTrackDrum} {gem_smashers_drum.tex set_bitmap ui/track/custom_track_textures/gem_smashers_drum_rb2_nomip.png}}
+      {scoreboard_frame.tex set_bitmap ui/track/custom_track_textures/scoreboard_frame_rb2.png}
+      {square_smasher_bright_green.tex set_bitmap ui/track/custom_track_textures/square_smasher_bright_green_rb2.png}
+      {square_smasher_bright_red.tex set_bitmap ui/track/custom_track_textures/square_smasher_bright_red_rb2.png}
+      {square_smasher_bright_yellow.tex set_bitmap ui/track/custom_track_textures/square_smasher_bright_yellow_rb2.png}
+      {square_smasher_bright_blue.tex set_bitmap ui/track/custom_track_textures/square_smasher_bright_blue_rb2.png}
+      {square_smasher_bright_orange.tex set_bitmap ui/track/custom_track_textures/square_smasher_bright_orange_rb2.png}}
+
+{if $transgems
+      {if {|| {$user get_track_type} kTrackDrum kTrackGuitar kTrackBass kTrackKeys kTrackRealKeys} {prism_gems.tex set_bitmap {sprint "ui/track/custom_track_textures/prism_gems_trans.png"}}}
+      {if {|| {$user get_track_type} kTrackDrum kTrackGuitar kTrackBass kTrackKeys kTrackRealKeys} {prism_gem_emissive.tex set_bitmap {sprint "ui/track/custom_track_textures/prism_gems_trans.png"}}}
+      {if {|| {$user get_track_type} kTrackGuitar kTrackBass kTrackKeys} {gem_smashers_guitar_nomip.tex set_bitmap ui/track/custom_track_textures/gem_smashers_guitar_trans_nomip.png}}
+      {if {|| {$user get_track_type} kTrackGuitar kTrackBass kTrackKeys} {gem_smashers_guitar.tex set_bitmap ui/track/custom_track_textures/gem_smashers_guitar_trans_nomip.png}}
+      {square_smasher_bright_green.tex set_bitmap ui/track/custom_track_textures/square_smasher_bright_green_trans.png}
+      {square_smasher_bright_red.tex set_bitmap ui/track/custom_track_textures/square_smasher_bright_red_trans.png}
+      {square_smasher_bright_yellow.tex set_bitmap ui/track/custom_track_textures/square_smasher_bright_yellow_trans.png}
+      {square_smasher_bright_blue.tex set_bitmap ui/track/custom_track_textures/square_smasher_bright_blue_trans.png}
+      {square_smasher_bright_orange.tex set_bitmap ui/track/custom_track_textures/square_smasher_bright_orange_trans.png}}
+
 {unless $defaultemissive
       {if {|| {$user get_track_type} kTrackGuitar kTrackBassk TrackRealBass kTrackRealGuitar} {spotlight_guitar_track_emissive.tex set_bitmap {sprint "ui/track/emissives/" $emissive ".png"}}}
       {if {== {$user get_track_type} kTrackDrum} {spotlight_drums_track_emissive.tex set_bitmap {sprint "ui/track/emissives/" $emissive ".png"}}}
