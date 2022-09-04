@@ -238,8 +238,8 @@ highframe55.tex highframe56.tex highframe57.tex highframe58.tex highframe59.tex 
 {if $rb2smashers
       {if {|| {$user get_track_type} kTrackGuitar kTrackBass kTrackKeys} {gem_smashers_guitar_nomip.tex set_bitmap ui/track/custom_track_textures/gem_smashers_guitar_rb2.png}}
       {if {|| {$user get_track_type} kTrackGuitar kTrackBass kTrackKeys} {gem_smashers_guitar.tex set_bitmap ui/track/custom_track_textures/gem_smashers_guitar_rb2.png}}
-      {if {== {$user get_track_type} kTrackDrum} {gem_smashers_drum_nomip.tex set_bitmap ui/track/custom_track_textures/gem_smashers_drum_rb2_nomip.png}}
-      {if {== {$user get_track_type} kTrackDrum} {gem_smashers_drum.tex set_bitmap ui/track/custom_track_textures/gem_smashers_drum_rb2_nomip.png}}
+      {if {== {$user get_track_type} kTrackDrum} {gem_smashers_drum_nomip.tex set_bitmap ui/track/custom_track_textures/gem_smashers_drum_rb2.png}}
+      {if {== {$user get_track_type} kTrackDrum} {gem_smashers_drum.tex set_bitmap ui/track/custom_track_textures/gem_smashers_drum_rb2.png}}
       {scoreboard_frame.tex set_bitmap ui/track/custom_track_textures/scoreboard_frame_rb2.png}
       {scoreboard_lens.tex set_bitmap ui/track/custom_track_textures/_no_highway.png}
       {square_smasher_bright_green.tex set_bitmap ui/track/custom_track_textures/square_smasher_bright_green_rb2.png}

@@ -2761,8 +2761,6 @@
                   {set $ididthisalready FALSE}
                   {set $rb4ui {! $rb4ui}}
                   {overshell update_all})
-<<<<<<< HEAD
-=======
                (mod_transgems
                   {modifier_mgr toggle_modifier_enabled mod_transgems}
                   {set $transgems {! $transgems}}
@@ -2786,7 +2784,6 @@
                   {modifier_mgr toggle_modifier_enabled mod_rb2smashers}
                   {set $rb2smashers {! $rb2smashers}}
                   {overshell update_all})
->>>>>>> 979fdba1 (trans gems update and rb2 smasher mod)
                (mod_shinysmashers
                   {modifier_mgr toggle_modifier_enabled mod_shinysmashers}
                   {if {modifier_mgr is_modifier_active mod_starlightsmashers}
