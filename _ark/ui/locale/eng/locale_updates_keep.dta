@@ -837,6 +837,8 @@
 (mod_doublespeed "breakneck speed")
 (mod_rb4os "Rock Band 4 Overshell")
 (mod_chmode "Clon Mode")
+(mod_nopart "No Particle Effects")
+(mod_noflares "No Flares")
 (chmode_warning "Clon Mode changes the hit window to be more lenient. Saving will be disabled and a message will be added to the end screen if you enable this.")
 (breakneck_warning
   "Please disable other breakneck speed modifiers before enabling this one.")
