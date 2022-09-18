@@ -16,8 +16,9 @@
    (mod_nocrowd)
 ;   (mod_nomuting)
    (mod_nosustain)
-   (mod_rb2sustain default_enabled)
+   (mod_rb2sustain)
    (mod_songselectnoise)
+
    (mod_enablebre)
    (mod_practiceoverdrive)
    (mod_nolanes)
@@ -32,6 +33,6 @@
    (mod_rb2ui custom_location)
    (mod_xboxos custom_location)
    (mod_ps3os custom_location)
-   (mod_wiios custom_location default_enabled)
+   (mod_wiios custom_location)
    (mod_rb4ui custom_location)
    (mod_auto_play))
