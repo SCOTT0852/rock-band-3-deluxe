@@ -387,6 +387,7 @@
 (redeem_code "Set Venue FPS")
 (message_motd "Rock Band 3 Deluxe devbuild loaded! Thanks for playing!")
 (message_motd_signin "Rock Band® 5 ALPHA! Do not share!")
+(message_motd_noconnection "get online idiot")
 (band_coop
    "Quick Spin")
 (band_chooser_skip
@@ -540,9 +541,9 @@
 (meme "Meme Songs")
 (ugc "Custom Songs")
 (ugc_plus "Custom Songs")
-(ugc1 "Rock Band Nickelback 1.0")
-(ugc2 "Rock Band Nickelback 2.0")
-(ugc_lost "Lost Rock Band Nickelback")
+(ugc1 "Rock Band Network 1.0")
+(ugc2 "Rock Band Network 2.0")
+(ugc_lost "Lost Rock Band Network")
 (rb1dlc "Rock Band 1/2 DLC")
 (rb3dlc "Rock Band 3 DLC")
 (rb4dlc "Rock Band 4 DLC")
@@ -821,7 +822,6 @@
 (mod_rb4ui "Rock Band 4 UI")
 (mod_rb4trk "Rock Band 4 Track")
 (mod_transgems "Trans Rights")
-(mod_rb2smashers "RB2 Smashers")
 (mod_fakebrutal "Brutal Mode")
 (mod_nobre "Disable BRE's")
 (mod_practiceoverdrive "OD in Practice")
@@ -831,6 +831,8 @@
 (mod_starlightsmashers "Galaxy Frets")
 (mod_shinysmashers "Shiny Frets")
 (mod_animatedgems "Animated Gems")
+(os_gems "Gem Selector")
+(os_smashers "Smasher Selector")
 (os_animatedsmasher "Animated Frets")
 (os_animatedhighway "Animated Highway")
 (os_animatedgem "Animated Gems")
@@ -866,10 +868,10 @@
    "breakneck speed 1.25x")
 (mod_doublespeed "breakneck speed")
 (mod_rb4os "Rock Band 4 Overshell")
-(mod_chmode "Clon Mode")
+(mod_chmode "Clone Hero Mode")
 (mod_nopart "No Particle Effects")
 (mod_noflares "No Flares")
-(chmode_warning "Clon Mode changes the hit window to be more lenient. Saving will be disabled and a message will be added to the end screen if you enable this.")
+(chmode_warning "Clone Hero Mode changes the hit window to be more lenient. Saving will be disabled and a message will be added to the end screen if you enable this.")
 (breakneck_warning
   "Please disable other breakneck speed modifiers before enabling this one.")
 (autoplay_warning
@@ -959,7 +961,7 @@
 (audition_main_title
    "Audition Mode")
 (audition_main_welcome
-   "In order to audition your songs, you need to run patched Magma on your PC. If you don't have Magma, google it or something idk.")
+   "In order to audition your songs, you need to run Magma on your PC. If you don't have Magma, you can download it at http://creators.rockband.com.")
 (audition_main_song_ready
    "Song Loaded")
 (audition_main_network_idling

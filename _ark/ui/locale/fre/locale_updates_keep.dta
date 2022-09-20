@@ -385,7 +385,9 @@
    "Réglages")
 (dlc_store "Régler la vitesse")
 (redeem_code "Régler les FPS du concert")
-(message_motd "Rock Band 3 Deluxe 0.1.7 chargé ! Merci pour y jouer !")
+(message_motd "Rock Band 3 Deluxe devbuild chargé ! Merci pour y jouer !")
+(message_motd_signin "Rock Band 3 Deluxe devbuild chargé ! Merci pour y jouer !")
+(message_motd_noconnection "Rock Band 3 Deluxe devbuild chargé ! Merci pour y jouer !")
 (video_01
    "Clip vidéo 1")
 (random
@@ -809,6 +811,8 @@
 (mod_shinysmashers "Frettes brillantes")
 (mod_animatedgems "Gemmes animées")
 (mod_animatedhighway "Piste animé")
+(os_gems "Gem Selector")
+(os_smashers "Smasher Selector")
 (os_animatedsmasher "Frettes animés")
 (os_animatedgem "Gemmes animés")
 (os_animatedhighway "Piste animé")
