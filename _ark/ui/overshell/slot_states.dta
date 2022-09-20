@@ -1466,7 +1466,7 @@
   {choose_character.mesh set_local_scale_index 2 1}
   {choose_character.mesh set_local_pos_index 2 300}
   {online_options.grp remove_object choose_character.mesh}))
-  
+
 
 (kState_RB3EScreensaver
  (view options_end_game)
@@ -2320,6 +2320,8 @@
     os_spotlight
     os_emissive
 	os_keyboard
+    os_gems
+    os_smashers
     #ifdef ANIMATION_ENABLED
     os_animatedgem
     os_animatedsmasher
@@ -2338,6 +2340,8 @@
     os_spotlight
     os_emissive
 	os_keyboard
+    os_gems
+    os_smashers
     #ifdef ANIMATION_ENABLED
     os_animatedgem
     os_animatedsmasher
@@ -2355,6 +2359,8 @@
     os_spotlight
     os_emissive
 	os_keyboard
+    os_gems
+    os_smashers
     #ifdef ANIMATION_ENABLED
     os_animatedgem
     os_animatedsmasher
@@ -2392,6 +2398,10 @@
     {$this show_state kState_RB3EEmissiveSelector})
    (os_keyboard
     {$this show_state kState_RB3EKeyboardSelector})
+   (os_gems
+    {$this show_state kState_RB3EGemSelector})
+   (os_smashers
+    {$this show_state kState_RB3ESmasherSelector})
    (os_animatedgem
     {$this show_state kState_RB3EAnimatedGemSelector})
    (os_animatedsmasher
@@ -2700,24 +2710,7 @@
                   {set $videobg {! $videobg}}
                   {do {$this show_state kState_RB3EVideoMsg} {$this set_focus confirm_action.lst}}
                   {ui goto_screen meta_loading_main_screen})
-               (mod_shinysmashers
-                  {modifier_mgr toggle_modifier_enabled mod_shinysmashers}
-                  {if {modifier_mgr is_modifier_active mod_starlightsmashers}
-                     {modifier_mgr toggle_modifier_enabled mod_starlightsmashers}}
-                  {set $animatedsmasherscustomtexture TRUE}
-                  {set $starlightsmashers FALSE}
-                  {set $animatedsmashers TRUE}
-                  {set $shinysmashers {! $shinysmashers}}
-                  {overshell update_all})
-               (mod_starlightsmashers
-                  {modifier_mgr toggle_modifier_enabled mod_starlightsmashers}
-                  {if {modifier_mgr is_modifier_active mod_shinysmashers}
-                     {modifier_mgr toggle_modifier_enabled mod_shinysmashers}}
-                  {set $animatedsmasherscustomtexture TRUE}
-                  {set $shinysmashers FALSE}
-                  {set $animatedsmashers TRUE}
-                  {set $starlightsmashers {! $starlightsmashers}}
-                  {overshell update_all})
+
                (mod_doublespeed
                   {modifier_mgr toggle_modifier_enabled mod_doublespeed}
                   {overshell update_all})
