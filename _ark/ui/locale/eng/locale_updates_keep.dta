@@ -388,6 +388,7 @@
 (message_motd "Rock Band 3 Deluxe devbuild loaded! Thanks for playing!")
 (message_motd_signin "Rock Band® 5 ALPHA! Do not share!")
 (message_motd_noconnection "get online idiot")
+(band_chooser_find " ")
 (band_coop
    "Quick Spin")
 (band_chooser_skip
