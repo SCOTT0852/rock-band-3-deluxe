@@ -20,7 +20,7 @@
 
 ;sets default gem track colors.
 ;list can be found in _ark\ui\track\gems\gems.dta
-{set $gem none}
+{set $gem rb4}
 
 ;sets default track speed. 1.15 is 115%, 1.30 is 130% and so on.
 {set $trackspeed 1.0}
