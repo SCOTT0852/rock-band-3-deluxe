@@ -25,7 +25,8 @@ This Repo contains everything you need to build an ark for Rock Band 3 Deluxe fo
 ## Features
 
 ### Quality of Life
-* Max song limit increased to 5000. Above 5000 causes instability issues.
+* My personal default settings auto-applied on boot
+* Max song limit increased to 8192. (WARNING!! Above 5000 causes instability issues on hardware!)
 * Song select ambient noise modifier, default disabled
 * New menu, "RB3DX Menu", in game for additional modifications
 * Selectable song speed and track speed by 5% increments
@@ -37,19 +38,22 @@ This Repo contains everything you need to build an ark for Rock Band 3 Deluxe fo
 * Default difficulty on first load is Expert
 * Song title always visible modifier
 * Keys on Guitar unlocked without meeting requirements
+* Hide online play for cleaner menus
 
 
 ### Authoring
 * Autoplay modifier for chart demos
 * Gameplay watermarks to deter abuse of autoplay including -
     * Disabling autosave
-    * Replacing endgame percentage with `BOT`
+    * Replacing endgame percentage with `-1%`
     * Manipulating MTV Overlay
 * Cycle camera menu button - available in-game when autoplay is enabled
 * Rock Revolution drums register as Pro Keys on PS3/RPCS3, to allow easy demos for pro instruments
 * Guitar Hero World Tour drums register as Pro Guitar/Bass on PS3/RPCS3, to allow easy demos for pro instruments
 
 ### Additional Modifications
+* Debatably funny text edits
+* Trans rights note modifier
 * Selectable colors per fret/note/sustain (It works on Pro Drums/non-Pro Keys too!)
 * Selectable Overshell colors
 * Huge variety of custom song sources supported
