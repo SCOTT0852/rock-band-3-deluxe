@@ -847,6 +847,9 @@
    "Pad ist Gitarre")
 (mod_auto_play
    "Autoplay")
+(mod_chmode_short "CH Mode")
+(mod_auto_kick
+   "Auto Kick")
 (mod_black_bg
    "Schwarzer Hintergrund")
 (mod_noflames

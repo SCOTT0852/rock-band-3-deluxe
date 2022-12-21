@@ -840,6 +840,9 @@
    "Pad is Guitar")
 (mod_auto_play
    "Autoplay")
+(mod_chmode_short "CH Mode")
+(mod_auto_kick
+   "Auto Kick")
 (mod_black_bg
    "Arrière plan noir")
 (mod_noflames
