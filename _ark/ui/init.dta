@@ -71,7 +71,7 @@
 {modifier_mgr toggle_modifier_enabled mod_wiios} ;changes the overshell theme coloring to match wii
 ;{modifier_mgr toggle_modifier_enabled mod_xboxos} ;changes the overshell theme coloring to match xbox
 ;{modifier_mgr toggle_modifier_enabled mod_nosustain} ;remove sustains, must still be played as sustains
-;{modifier_mgr toggle_modifier_enabled mod_rb2sustain} ;make sustains look a bit more like rock band 2
+{modifier_mgr toggle_modifier_enabled mod_rb2sustain} ;make sustains look a bit more like rock band 2
 ;{modifier_mgr toggle_modifier_enabled mod_noflames} ;disables hit flames
 ;{modifier_mgr toggle_modifier_enabled mod_noflares} ;disables hit flares
 ;{modifier_mgr toggle_modifier_enabled mod_nopart} ;disables hit particles
