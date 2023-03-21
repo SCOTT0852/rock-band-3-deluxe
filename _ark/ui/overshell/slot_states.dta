@@ -2896,7 +2896,25 @@
                   {set $videobg {! $videobg}}
                   {do {$this show_state kState_RB3EVideoMsg} {$this set_focus confirm_action.lst}}
                   {ui goto_screen meta_loading_main_screen})
-
+               (mod_transgems
+                  {modifier_mgr toggle_modifier_enabled mod_transgems}
+                  {set $transgems {! $transgems}}
+                  {set $slot1_color 3}
+                  {set $slot2_color 1}
+                  {set $slot3_color 2}
+                  {set $slot4_color 1}
+                  {set $slot5_color 3}
+                  {set $fret1_color 3}
+                  {set $fret2_color 1}
+                  {set $fret3_color 2}
+                  {set $fret4_color 1}
+                  {set $fret5_color 3}
+                  {set $sus1_color 3}
+                  {set $sus2_color 1}
+                  {set $sus3_color 2}
+                  {set $sus4_color 1}
+                  {set $sus5_color 3}
+                  {overshell update_all})
                (mod_doublespeed
                   {modifier_mgr toggle_modifier_enabled mod_doublespeed}
                   {overshell update_all})
