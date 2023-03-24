@@ -59,6 +59,8 @@ This guide contains full instructions on how to install Rock Band 3 Deluxe for P
 * Guitar Hero World Tour drums register as Pro Guitar/Bass on PS3/RPCS3, to allow easy demo for pro instruments
 
 ## Additional Modifications
+* Debatably funny text edits
+* Trans rights note modifier
 * Selectable colors per fret/note/sustain (It works on Pro Drums/non-Pro Keys too!)
 * Selectable Overshell colors
 * Huge variety of custom song sources supported
