@@ -1384,7 +1384,7 @@
        {fc_preview_clip play}
     )
  (on_cancel
-  {$this show_state kState_RB3EAppearanceMenu}))
+  {$this show_state kState_RB3EAudioMenu}))
 
 (kState_RB3EInstStrk
    (view options)
@@ -2796,6 +2796,7 @@
 ;    os_setcol
 ;    os_scrsvr
     os_cam
+;    os_fx
       )}
   {if_else {== {{$this get_user} get_controller_type} kControllerRealGuitar}
   {options.lst
@@ -2820,6 +2821,7 @@
 ;    #endif
 ;    os_scrsvr
     os_cam
+;    os_fx
       )}
   {options.lst
    set_data
@@ -2844,6 +2846,7 @@
 ;    os_setcol
 ;    os_scrsvr
     os_cam
+;    os_fx
 	)}}})
  (SELECT_MSG
  {set $rb3esettingsval {$component selected_sym}}
@@ -2899,7 +2902,9 @@
 ;   (os_scrsvr
 ;    {$this show_state kState_RB3EScreensaver})
    (os_cam
-    {$this show_state kState_RB3ECameraMenu})})
+    {$this show_state kState_RB3ECameraMenu})
+   (os_fx
+    {$this show_state kState_RB3EFXMenu})})
 	(on_cancel
       {$this show_game_options}))
 (kState_RB3ESpeedMenu
@@ -3192,10 +3197,10 @@
    {options_extras.lst set_selected $rb3eappearanceval}
    {options_audio.lst set_data 
    (
+      os_audiomenu
       os_uithm
       os_trkthm
       os_osthm
-      os_fcaudio
       os_fretboard
       os_spotlight
       os_emissive
@@ -3212,6 +3217,8 @@
    {set $rb3eappearanceval {$component selected_sym}}
   {switch
    {$component selected_sym}
+   (os_audiomenu
+      {$this show_state kState_RB3EAudioMenu})
    (os_uithm
       {$this show_state kState_RB3EUIThemes})
    (os_trkthm
@@ -3232,8 +3239,6 @@
      {$this show_state kState_RB3ESmasherSelector})
    (os_animation
      {$this show_state kState_RB3AnimationMenu})
-   (os_fcaudio
-     {$this show_state kState_RB3EFullComboSFXSelector})
    (os_setcol
      {do {set $rb3eslider FALSE} {if_else {== {{$this get_user} get_controller_type} kControllerDrum}
      {$this show_state kState_RB3EDrumColorSelector} {if_else {== {{$this get_user} get_controller_type} kControllerKeys}
@@ -3246,6 +3251,23 @@
    (on_cancel
       {options.lst set_selected 3}
       {$this show_state kState_RB3ESettings}))
+(kState_RB3EAudioMenu
+   (view options_end_game)
+   (enter
+   {options_end_game.lst set_selected $rb3audval}
+   {options_end_game.lst set_data
+      (os_fcaudio os_cyclefx)})
+   (SELECT_MSG
+      {set $rb3audval {$component selected_sym}}
+  {switch
+   {$component selected_sym}
+   (os_cyclefx
+      {cycle_guitar_fx})
+   (os_fcaudio
+      {$this show_state kState_RB3EFullComboSFXSelector})
+   })
+   (on_cancel
+      {$this show_state kState_RB3EAppearanceMenu}))
 (kState_RB3EAngleMenu
    (view options_extras)
    (enter
@@ -3427,6 +3449,40 @@
    (SELECT_MSG
       {set $fpsslider FALSE}
       {$this show_state kState_RB3EMenuBG}))
+(kState_RB3EFXMenu
+   (view online_options)
+   (enter
+   {online_options.lst set_selected $rb3fxval}
+   {online_options.lst set_data
+      (os_cyclefx os_fx0 os_fx1 os_fx2 os_fx3 os_fx4 os_fx5)})
+   (SELECT_MSG
+      {set $rb3fxval {$component selected_sym}}
+  {switch
+   {$component selected_sym}
+   (os_cyclefx
+      {cycle_guitar_fx})
+   (os_fx0
+      {cycle_guitar_fx}
+      {set $test_guitar_fx 0})
+   (os_fx1
+      {cycle_guitar_fx}
+      {set $test_guitar_fx 1})
+   (os_fx2
+      {cycle_guitar_fx}
+      {set $test_guitar_fx 2})
+   (os_fx3
+      {cycle_guitar_fx}
+      {set $test_guitar_fx 3})
+   (os_fx4
+      {cycle_guitar_fx}
+      {set $test_guitar_fx 4})
+   (os_fx5
+      {cycle_guitar_fx}
+      {set $test_guitar_fx 5})
+   })
+   (on_cancel
+      {options.lst set_selected 5}
+      {$this show_state kState_RB3ESettings}))
 (kState_RB3EUIThemes
    (view options_end_game)
    (enter
