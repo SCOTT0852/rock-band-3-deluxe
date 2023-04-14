@@ -791,12 +791,32 @@
                      {overshell update_all}}
                   {$this show_saveloadmgr_not_idle}}
                {$this show_saveloadmgr_not_meta}})}))
+#define AUDIO_DATA
+(
+   overshell_audio_instruments
+   overshell_audio_bg_music
+   overshell_audio_crowd
+   overshell_audio_sfx
+   #ifdef HX_PS3
+   overshell_audio_voice_chat
+   #endif
+   {if_else {modifier_mgr is_modifier_active mod_nosfx}
+   os_audio_instsfx_on
+   os_audio_instsfx_off}
+)
 (kState_OptionsAudio
    (view options_audio)
    (on_cancel
       {$this show_options_av_settings})
+   (lst_reset
+      {options_audio.lst set_data (AUDIO_DATA)}
+      {if $audiomenuval
+         {options_audio.lst set_selected $audiomenuval}
+      }
+   )
    (enter
-      {options_audio.lst set_selected 0}
+      {$this lst_reset}
+      {options_audio.lst set_selected $audiomenuval}
       {instruments.sld set_num_steps 12}
       {bg_music.sld set_num_steps 12}
       {crowd.sld set_num_steps 12}
@@ -807,15 +827,7 @@
       {crowd.sld set_current {profile_mgr get_crowd_volume}}
       {sfx.sld set_current {profile_mgr get_fx_volume}}
       {voice_chat.sld set_current {profile_mgr get_voice_chat_volume}}
-         {options_audio.lst
-            set_data
-              (overshell_audio_instruments
-               overshell_audio_bg_music
-               overshell_audio_crowd
-               overshell_audio_sfx
-               #ifdef HX_PS3
-                overshell_audio_voice_chat
-               #endif)}
+      {options_audio.lst set_data (AUDIO_DATA)}
    )
    (update_view
       {handle
@@ -844,6 +856,7 @@
             voice_chat.sld
             "")})
    (SELECT_MSG
+      {set $audiomenuval {$component selected_sym}}
       {if
          {== $component options_audio.lst}
          {switch
@@ -867,7 +880,20 @@
             (overshell_audio_voice_chat
                {voice_chat.sld store}
                {voice_chat.sld set_showing TRUE}
-               {$this set_focus voice_chat.sld})}})
+               {$this set_focus voice_chat.sld})
+            (os_audio_instsfx_off
+               {unless {modifier_mgr is_modifier_active mod_nosfx}
+                  {modifier_mgr toggle_modifier_enabled mod_nosfx}
+                  {options_audio.lst set_data (AUDIO_DATA)}
+               {if $audiomenuval
+                  {options_audio.lst set_selected $audiomenuval}}})
+            (os_audio_instsfx_on
+               {if {modifier_mgr is_modifier_active mod_nosfx}
+                  {modifier_mgr toggle_modifier_enabled mod_nosfx}}
+               {options_audio.lst set_data (AUDIO_DATA)}
+               {if $audiomenuval
+                  {options_audio.lst set_selected $audiomenuval}})}
+      {$this lst_reset}})
    (BUTTON_DOWN_MSG
       {if_else
          {find_elem
@@ -1898,69 +1924,69 @@
         {set $animatedgemname {$component selected_sym}}
         {choose_character.tex set_bitmap {sprint "ui/track/animated_gems/prism_gems_" $animatedgemname "/prism_gems_" $animatedgemname "_0.png"}})
  (on_cancel
-  {$this show_state kState_RB3AnimationMenu}
+  {$this show_state kState_RB3TextureMenu}
   {choose_character.mesh set_local_scale_index 0 0.5}
   {choose_character.mesh set_local_scale_index 2 1}
   {choose_character.mesh set_local_pos_index 2 300}
   {online_options.grp remove_object choose_character.mesh}))
   
-(kState_RB3EAnimatedSmasherSelector
- (view online_options)
- (enter
-    {online_options.lst set circular 1}
-    {online_options.lst set_selected $animatedsmashermenu}
-    {online_options.grp add_object choose_character.mesh}
-    {choose_character.mesh set_local_pos_index 2 175}
-    {choose_character.mesh set_local_scale_index 0 0.2}
-    {choose_character.mesh set_local_scale_index 2 0.4}
-    {choose_character.mat set diffuse_tex choose_character.tex}
-    {choose_character.tex set_bitmap {sprint "ui/track/animated_smashers/gem_smasher_guitar_shiny/gem_smasher_guitar_shiny_0.png"}}
-    {online_options.lst set_data ("shiny" "starlight")}
- )
-   (SCROLL_MSG
-      {set $animatedsmashermenu {$component selected_sym}}
-      {choose_character.tex set_bitmap {sprint "ui/track/animated_smashers/gem_smasher_guitar_" $animatedsmashermenu "/gem_smasher_guitar_" $animatedsmashermenu "_0.png"}}
-      {$this update})
-   (SELECT_MSG
-        {set $animatedsmashers TRUE}
-        {set $animatedsmasherscustomtexture TRUE}
-        {set $animatedsmashername {$component selected_sym}}
-        {choose_character.tex set_bitmap {sprint "ui/track/animated_smashers/gem_smasher_guitar_" $animatedsmashername "/gem_smasher_guitar_" $animatedsmashername "_0.png"}})
- (on_cancel
-  {$this show_state kState_RB3AnimationMenu}
-  {choose_character.mesh set_local_scale_index 0 0.5}
-  {choose_character.mesh set_local_scale_index 2 1}
-  {choose_character.mesh set_local_pos_index 2 300}
-  {online_options.grp remove_object choose_character.mesh}))
+;(kState_RB3EAnimatedSmasherSelector
+; (view online_options)
+; (enter
+;    {online_options.lst set circular 1}
+;    {online_options.lst set_selected $animatedsmashermenu}
+;    {online_options.grp add_object choose_character.mesh}
+;    {choose_character.mesh set_local_pos_index 2 175}
+;    {choose_character.mesh set_local_scale_index 0 0.2}
+;    {choose_character.mesh set_local_scale_index 2 0.4}
+;    {choose_character.mat set diffuse_tex choose_character.tex}
+;    {choose_character.tex set_bitmap {sprint "ui/track/animated_smashers/gem_smasher_guitar_shiny/gem_smasher_guitar_shiny_0.png"}}
+;    {online_options.lst set_data ("shiny" "starlight")}
+; )
+;   (SCROLL_MSG
+;      {set $animatedsmashermenu {$component selected_sym}}
+;      {choose_character.tex set_bitmap {sprint "ui/track/animated_smashers/gem_smasher_guitar_" $animatedsmashermenu "/gem_smasher_guitar_" $animatedsmashermenu "_0.png"}}
+;      {$this update})
+;   (SELECT_MSG
+;        {set $animatedsmashers TRUE}
+;        {set $animatedsmasherscustomtexture TRUE}
+;        {set $animatedsmashername {$component selected_sym}}
+;        {choose_character.tex set_bitmap {sprint "ui/track/animated_smashers/gem_smasher_guitar_" $animatedsmashername "/gem_smasher_guitar_" $animatedsmashername "_0.png"}})
+; (on_cancel
+;  {$this show_state kState_RB3AnimationMenu}
+;  {choose_character.mesh set_local_scale_index 0 0.5}
+;  {choose_character.mesh set_local_scale_index 2 1}
+;  {choose_character.mesh set_local_pos_index 2 300}
+;  {online_options.grp remove_object choose_character.mesh}))
 
-(kState_RB3EAnimatedHighwaySelector
- (view online_options)
- (enter
-    {online_options.lst set circular 1}
-    {online_options.lst set_selected $animatedhighwaymenu}
-    {online_options.grp add_object choose_character.mesh}
-    {choose_character.mesh set_local_pos_index 2 175}
-    {choose_character.mesh set_local_scale_index 0 0.2}
-    {choose_character.mesh set_local_scale_index 2 0.4}
-    {choose_character.mat set diffuse_tex choose_character.tex}
-    {online_options.lst set_data ("rb4_new" "rb4effect5_color4" "rb4effect6_color7" "rb4effect4_color1" "rb4effect9_color1")}
-    {choose_character.tex set_bitmap {sprint "ui/track/animated_surfaces/rb4_new/rb4_new_0.png"}}
- )
-   (SCROLL_MSG
-      {set $animatedhighwaymenu {$component selected_sym}}
-      {choose_character.tex set_bitmap {sprint "ui/track/animated_surfaces/" $animatedhighwaymenu "/" $animatedhighwaymenu "_0.png"}}
-      {$this update})
-   (SELECT_MSG
-        {set $animatedhighway TRUE}
-        {set $animatedhighwaycustomtexture TRUE}
-        {set $highway _rb3_guitar}
-        {set $animatedhighwayname {$component selected_sym}})
- (on_cancel
-  {$this show_state kState_RB3AnimationMenu}
-  {choose_character.mesh set_local_scale_index 0 0.5}
-  {choose_character.mesh set_local_scale_index 2 1}
-  {choose_character.mesh set_local_pos_index 2 300}
-  {online_options.grp remove_object choose_character.mesh}))
+;(kState_RB3EAnimatedHighwaySelector
+; (view online_options)
+; (enter
+;    {online_options.lst set circular 1}
+;    {online_options.lst set_selected $animatedhighwaymenu}
+;    {online_options.grp add_object choose_character.mesh}
+;    {choose_character.mesh set_local_pos_index 2 175}
+;    {choose_character.mesh set_local_scale_index 0 0.2}
+;    {choose_character.mesh set_local_scale_index 2 0.4}
+;    {choose_character.mat set diffuse_tex choose_character.tex}
+;    {online_options.lst set_data ("rb4_new" "rb4effect5_color4" "rb4effect6_color7" "rb4effect4_color1" "rb4effect9_color1")}
+;    {choose_character.tex set_bitmap {sprint "ui/track/animated_surfaces/rb4_new/rb4_new_0.png"}}
+; )
+;   (SCROLL_MSG
+;      {set $animatedhighwaymenu {$component selected_sym}}
+;      {choose_character.tex set_bitmap {sprint "ui/track/animated_surfaces/" $animatedhighwaymenu "/" $animatedhighwaymenu "_0.png"}}
+;      {$this update})
+;   (SELECT_MSG
+;        {set $animatedhighway TRUE}
+;        {set $animatedhighwaycustomtexture TRUE}
+;        {set $highway _rb3_guitar}
+;        {set $animatedhighwayname {$component selected_sym}})
+; (on_cancel
+;  {$this show_state kState_RB3AnimationMenu}
+;  {choose_character.mesh set_local_scale_index 0 0.5}
+;  {choose_character.mesh set_local_scale_index 2 1}
+;  {choose_character.mesh set_local_pos_index 2 300}
+;  {online_options.grp remove_object choose_character.mesh}))
 
 (kState_RB3ESmasherSelector
  (view online_options)
@@ -3578,6 +3604,7 @@
    (SELECT_MSG
       {switch {$component selected_sym}
       (overshell_continue
+         {set $animatedgems FALSE}
          {set $emissivecustomtexture FALSE}
          {set $emissive none}
          {set $emissivegtrcustomtexture FALSE}
@@ -3730,6 +3757,7 @@
       {$this show_state kState_RB3EThmResetMsg}
    )
    (os_rb3thm
+      {set $animatedgems FALSE}
       {set $emissivecustomtexture FALSE}
       {set $emissive none}
       {set $emissivegtrcustomtexture TRUE}
@@ -3838,6 +3866,9 @@
       {set $voxarrow rb4}
       {set $voxhwcustomtexture TRUE}
       {set $voxhw rb4}
+      {set $animatedgems TRUE}
+      {set $animatedgemscustomtexture TRUE}
+      {set $animatedgemname rb4}
    ;   {set $keyboardcustomtexture TRUE}
    ;   {set $keyboard none}
       {if {modifier_mgr is_modifier_active mod_rb2sustain}
@@ -3846,6 +3877,7 @@
          {modifier_mgr toggle_modifier_enabled mod_rb4sustain}}
    )
    (os_rb2thm
+      {set $animatedgems FALSE}
       {set $emissivecustomtexture FALSE}
       {set $emissive none}
       {set $emissivegtrcustomtexture TRUE}
@@ -3932,9 +3964,7 @@
       os_keyboard
       os_voxhw
       os_voxarrow
-	  #ifdef ANIMATION_ENABLED
       os_animation
-      #endif
    )})
    (SELECT_MSG
    {set $rb3texval {$component selected_sym}}
@@ -3971,15 +4001,7 @@
    (os_voxarrow
      {$this show_state kState_RB3EVoxArrowSelector})
    (os_animation
-     {$this show_state kState_RB3AnimationMenu})
-   (os_setcol
-     {do {set $rb3eslider FALSE} {if_else {== {{$this get_user} get_controller_type} kControllerDrum}
-     {$this show_state kState_RB3EDrumColorSelector} {if_else {== {{$this get_user} get_controller_type} kControllerKeys}
-     {$this show_state kState_RB3EKeysColorWarning}
-     {$this show_state kState_RB3EColorSelector}}}})
-   (os_angle
-     {$this show_state kState_RB3EAngleMenu}
-   )
+     {$this show_state kState_RB3EAnimatedGemSelector})
    })
    (on_cancel
       {options.lst set_selected 4}
@@ -4093,27 +4115,6 @@
    )
    (SELECT_MSG
       {$this show_state kState_RB3EAngleMenu}))
-(kState_RB3AnimationMenu
-   (view options_extras)
-   (enter
-   {options_extras.lst set_data 
-   (
-      os_animatedgem
-      os_animatedsmasher
-      os_animatedhighway
-   )})
-   (SELECT_MSG
-  {switch
-   {$component selected_sym}
-   (os_animatedgem
-     {$this show_state kState_RB3EAnimatedGemSelector})
-   (os_animatedsmasher
-     {$this show_state kState_RB3EAnimatedSmasherSelector})
-   (os_animatedhighway
-     {$this show_state kState_RB3EAnimatedHighwaySelector})
-   })
-   (on_cancel
-      {$this show_state kState_RB3TextureMenu}))
 (kState_RB3ECameraMenu
    (view online_options)
    (enter

@@ -434,7 +434,7 @@
 (video_07
    "Music Video 7")
 (big_club_10
-   "MatinÃ©e, Vexx Nightclub")
+   "Matinée, Vexx Nightclub")
 (small_club_06
    "Amsterdam, The Netherlands")
 (tour_city_arcade
@@ -454,7 +454,7 @@
 (small_club_05
    "Gotta Spare Bowling Alley")
 (tour_city_cafe
-   "a CafÃ©")
+   "a Café")
 (big_club_07
    "Chapel Hill, NC")
 (big_club_02
@@ -490,7 +490,7 @@
 (big_club_15
    "Milwaukee, WI")
 (arena_01
-   "MontrÃ©al, Canada")
+   "Montréal, Canada")
 (arena_04
    "Moscow, Russia")
 (big_club_06
@@ -552,10 +552,17 @@
 (meme "Meme Songs")
 (ugc "Custom Songs")
 (ugc_plus "Custom Songs")
+<<<<<<< HEAD
 (ugc1 "Rock Band Nickelback 1.0")
 (ugc2 "Rock Band Nickelback 2.0")
 (ugc_lost "Lost Rock Band Nickelback")
 (rb1dlc "Rock Band 1/2 DLC")
+=======
+(ugc1 "Rock Band Network 1.0")
+(ugc2 "Rock Band Network 2.0")
+(ugc_lost "Lost Rock Band Network")
+(rb1_dlc "Rock Band Downloadable Content")
+>>>>>>> bd815314b0bcae1dfad3f3954270cd3d3e5ad790
 (rb3dlc "Rock Band 3 DLC")
 (rb4dlc "Rock Band 4 DLC")
 (rb4_dlc "Rock Band 4 DLC")
@@ -1367,7 +1374,7 @@
 (classic
    "GH2: Clive Winston")
 (deathmetal1
-   "GH2: Lars ÃœmlaÃ¼t")
+   "GH2: Lars Ümlaüt")
 (funk1
    "GH2: Xavier Stone")
 (glam1
@@ -1429,3 +1436,5 @@
 (os_vertical "Vertical")
 (os_zspace "Z-Space")
 (os_mtvpos "MTV Position")
+(os_audio_instsfx_off "Disable Instrument SFX")
+(os_audio_instsfx_on "Enable Instrument SFX")

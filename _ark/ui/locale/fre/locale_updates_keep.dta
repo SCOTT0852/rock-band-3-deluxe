@@ -523,10 +523,10 @@
 (meme "Meme Songs")
 (ugc "Chansons customs")
 (ugc_plus "Chansons customs")
-(ugc1 "Rock Band Nickelback 1.0")
-(ugc2 "Rock Band Nickelback 2.0")
-(ugc_lost "Lost Rock Band Nickelback")
-(rb1dlc "Rock Band 1/2 DLC")
+(ugc1 "Rock Band Network 1.0")
+(ugc2 "Rock Band Network 2.0")
+(ugc_lost "Lost Rock Band Network")
+(rb1_dlc "Rock Band Downloadable Content")
 (rb3dlc "Rock Band 3 DLC")
 (rb4dlc "Rock Band 4 DLC")
 (rb4_dlc "Rock Band 4 DLC")
@@ -703,8 +703,6 @@
  "iorn madien xd 69")
 (kario
  "Kariodude's GH2 ISO")
-(marfvol0
- "marfGH: Volume 0")
 (overshell_freecam
  "Caméra libre")
 (overshell_postproc

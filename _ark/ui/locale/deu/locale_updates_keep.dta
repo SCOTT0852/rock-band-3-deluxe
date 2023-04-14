@@ -521,20 +521,12 @@
 (c3legacy "C3 Legacy")
 (milohax "MiloHax Customs")
 (meme "Meme Songs")
-<<<<<<< HEAD
-(ugc "Custom Songs")
-(ugc_plus "Custom Songs")
-(ugc1 "Rock Band Nickelback 1.0")
-(ugc2 "Rock Band Nickelback 2.0")
-(ugc_lost "Lost Rock Band Nickelback")
-=======
 (ugc "Benutzerdefinierte Songs")
 (ugc_plus "Benutzerdefinierte Songs")
 (ugc1 "Rock Band Network 1.0")
 (ugc2 "Rock Band Network 2.0")
 (ugc_lost "Rock Band Network (Verlorengegangen)")
->>>>>>> 01dee09e754a97895d5decc55857b4473e8f2d73
-(rb1dlc "Rock Band 1/2 DLC")
+(rb1_dlc "Rock Band Downloadable Content")
 (rb3dlc "Rock Band 3 DLC")
 (rb4dlc "Rock Band 4 DLC")
 (rb4_dlc "Rock Band 4 DLC")
@@ -711,8 +703,6 @@
  "iorn madien xd 69")
 (kario
  "Kariodude's GH2 ISO")
-(marfvol0
- "marfGH: Volume 0")
 (overshell_freecam
  "Cycle Camera")
 (overshell_postproc
