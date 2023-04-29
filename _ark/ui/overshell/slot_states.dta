@@ -4733,7 +4733,6 @@
       {choose_part.lst set_selected $focus_item})
    (enter
       {$this update_part_select_list}
-   #ifndef RB3E
       {if {== {{$this get_user} get_controller_type} kControllerGuitar}
   {choose_part.lst
    set_data
@@ -4763,7 +4762,8 @@
    (overshell_keys
     overshell_real_keys
     overshell_guitar
-    overshell_bass)}
+    overshell_bass
+    overshell_drums)}
    {choose_part.lst set_selected $default_keys}}
       {if {== {{$this get_user} get_controller_type} kControllerRealGuitar}
   {choose_part.lst
@@ -4773,7 +4773,6 @@
     overshell_guitar
     overshell_bass)}
    {choose_part.lst set_selected $default_real_guitar}}
-    #endif
     )
    (SELECT_MSG
       {switch
