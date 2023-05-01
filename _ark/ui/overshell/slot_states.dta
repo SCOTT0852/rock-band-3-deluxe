@@ -1959,7 +1959,7 @@
          {set $sustaincustomtexture TRUE}
          {set $sustain rb4}
          {set $voxarrowcustomtexture TRUE}
-         {set $voxarrow rb4}
+         {set $voxarrow rivals}
          {set $voxhwcustomtexture TRUE}
          {set $voxhw rb4}
          {set $animatedgems TRUE}
@@ -3936,13 +3936,13 @@
       {set $emissivecustomtexture FALSE}
       {set $emissive none}
       {set $emissivegtrcustomtexture TRUE}
-      {set $emissivegtr rb2_guitar_yellow}
+      {set $emissivegtr rb2_bass_yellow}
       {set $emissivebasscustomtexture TRUE}
-      {set $emissivebass rb2_bass_yellow}
+      {set $emissivebass rb2_guitar_yellow}
       {set $emissivedrumcustomtexture TRUE}
       {set $emissivedrum rb2_drums_yellow}
       {set $emissivekeyscustomtexture TRUE}
-      {set $emissivekeys none}
+      {set $emissivekeys rb2_bass_yellow}
       {set $spotlightcustomtexture TRUE}
       {set $spotlight rb2_bass_superstreak}
       {set $spotlightgtrcustomtexture FALSE}
@@ -3970,7 +3970,7 @@
       {set $odbarcustomtexture TRUE}
       {set $odbar rb2}
       {set $railscustomtexture TRUE}
-      {set $rails rb3}
+      {set $rails rb2}
       {set $scorecustomtexture TRUE}
       {set $scoretex rb2}
       {set $flamescustomtexture TRUE}
@@ -3978,8 +3978,8 @@
       {set $smashercustomtexture TRUE}
       {set $smasher rb2}
       {set $gemcustomtexture TRUE}
-      {set $gem rb3}
-      {set $sustaincustomtexture FALSE}
+      {set $gem rb2}
+      {set $sustaincustomtexture TRUE}
       {set $sustain rb2}
       {set $voxarrowcustomtexture TRUE}
       {set $voxarrow gdrb}
