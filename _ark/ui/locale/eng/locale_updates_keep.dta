@@ -388,6 +388,12 @@
 (main_menu_welcome
    "Welcome to Rock Band 3 Deluxe!\n\nTry heading to 'Deluxe Settings' in your player menu, there you'll be able to fully customize the game to your liking.\n\nRB3DX is a free modification by MiloHax; if you paid for this mod, you were scammed!")
 #endif
+(relative_writes_warn
+   "WARNING\n\nRock Band 3 Deluxe will not be able to properly save your settings because game relative writes are disabled in Xenia.\n\nGo to xenia-canary.config.toml and set allow_game_relative_writes to TRUE.")
+(dx_continue
+   "Let's Rock!")
+(dx_iunderstand
+   "I Understand")
 (calibration_skip
    "Continue")
 (music_store
@@ -831,8 +837,8 @@
 (speedcap_msg "MAX SONG SPEED: %d%%")
 (fps_msg "VENUE FRAMERATE: %dFPS")
 (settings_warning "A dx.dta file already exists. You must delete this first before saving new settings.")
-(settings_save "Successfully saved Deluxe Settings and additional Modifiers to dx.dta")
-(settings_error "i put the sexy in dyslexia")
+(settings_save "Successfully saved Deluxe Settings and additional Modifiers to dx.dta, mod.dta, and val.dta")
+(settings_error "There was an error saving your settings, please ensure game relative writes are enabled in Xenia.")
 (os_writesettings "[Save Settings]")
 (os_fps "Venue FPS is set to %d\n\n(Going above 30 is not recommended for Console)")
 (os_speed "Song Speed is set to %d%%")
@@ -859,7 +865,7 @@
 (os_bg3 "Original")
 (os_nobg "None")
 (os_bg2 "Music Store")
-(os_bg4 "Van")
+(os_bg4 "Tour Van")
 (os_bg5 "Training Lounge")
 (os_bg7 "the cooler training lounge")
 (os_bgwarn "This will not take effect until you save settings and restart the game.")
@@ -965,16 +971,17 @@
 (rivals "RB4 (Rivals)")
 (noflm "[No Flames]")
 (mod_videobg "Video Backgrounds")
+(mod_fakejuke "Jukebox Mode")
 (mod_xboxos "Xbox")
 (mod_rb2ui "Rock Band 2")
 (mod_rb2trk "Rock Band 2")
 (mod_rb4ui "Rock Band 4")
 (mod_rb4trk "Rock Band 4")
 (mod_fakebrutal "Brutal Mode")
-(mod_nobre "Disable BRE's")
-(mod_practiceoverdrive "OD in Practice")
+(mod_nobre "No Big Rock Endings")
+(mod_practiceoverdrive "Overdrive in Practice")
 (mod_nolanes "No Lanes")
-(mod_rb4lanes "RB4 Lanes")
+(mod_rb4lanes "RB4 Lane Behavior")
 (mod_nomv "No Music Videos")
 (mod_blackmenu "No Menu Backgrounds")
 (mod_nointro "No Venue Intros")
@@ -1003,7 +1010,7 @@
 (mod_songselectnoise
    "Song Select Ambience")
 (mod_nocrowd
-   "No Crowd")
+   "No Crowd SFX")
 (mod_whammyfx "No Whammy FX")
 (mod_nosustain "No Sustain Tails")
 (mod_rb2sustain "RB2 Sustain Tails")
@@ -1030,6 +1037,7 @@
 (mod_doublespeed_1.25x
    "breakneck speed 1.25x")
 (mod_doublespeed "breakneck speed")
+(mod_synced_track_speeds "Sync Difficulty Speeds")
 (mod_stopcrashing "Disable Custom Textures")
 (os_rb3os "Rock Band 3")
 (mod_rb4os "Rock Band 4")
@@ -1050,6 +1058,8 @@
   "Please disable other breakneck speed modifiers before enabling this one.")
 (autoplay_warning
   "This modifer is intended to be used for authors demonstrating their charts. Saving will be disabled until you restart if you enable this.")
+(fakejuke_warning
+  "This modifer allows for easy Performance Mode and venue showcases. Saving will be disabled until you restart if you enable this.")
 (screensaver_warning
   "This will hide everything and display the menu background. All unsaved progress will be lost and you won't be able to interact with the game until you restart. Are you sure?")
 (author_warning
@@ -1282,7 +1292,7 @@
 (award_flawless
    "Full Combo")
 (mod_fcclip
-   "Disable Endgame Sounds")
+   "No Endgame Sounds")
 (mod_fastermode
    "Acceleration Mode")
 (mod_fastermode_topspeed
@@ -1428,7 +1438,7 @@
 (os_25 "+25")
 (os_10 "+10")
 (os_1 "+1")
-(os_reset "reset")
+(os_reset "[Reset]")
 (os_minus1 "-1")
 (os_minus10 "-10")
 (os_minus25 "-25")
@@ -1438,9 +1448,14 @@
 (os_vertical "Vertical")
 (os_zspace "Z-Space")
 (os_mtvpos "MTV Position")
-(os_audio_instsfx_off "Disable Instrument SFX")
+(mod_nosfx "No Instrument SFX")
 (os_audio_instsfx_on "Enable Instrument SFX")
+(os_audio_instsfx_off "Disable Instrument SFX")
 (mod_calibration "Calibration Mode")
 (calibration_warning "This modifier will drastically shrink your hit window, allowing you to fine tune your calibration settings. Continue?")
 (os_pause "Toggle Pause")
 (mod_nopause "Disable in-game Pause")
+(mod_skipsavemsg "Always Save DX Settings")
+(save_warning "Would you like to save these settings?")
+(os_save "Save")
+(os_dontsave "Don't Save")
