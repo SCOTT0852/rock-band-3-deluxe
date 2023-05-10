@@ -1,4 +1,28 @@
-;DO NOT MAKE COMMITS TO THIS FILE ON GITHUB
+;DO NOT MAKE COMMITS TO THIS FILE ON GITHUB (lol. lmao.)
 ;put your own custom locale strings here
-;ex.
-;(overshell_rb3esettings "FART Settings")
+(message_motd "GoCentral is down (or not set up, but you wouldn't do that, would you?)")
+(message_motd_signin "Rock Band® 5 ALPHA! Do not share!")
+(message_motd_noconnection "get online idiot")
+(rb2dx "Rock Band 2 DX")
+(band_coop
+   "Quick Spin")
+(band_chooser_skip
+   "Quick Spin")
+(band_quickplay
+   "band quick spin")
+(find_players_quickplay_band
+   "Quick Spin")
+(mod_choose_venue_desc
+   "Choose a venue to play in Quick Spin.")
+(pn_submenu_quickplay
+   "Quick Spin")
+(qp_local
+   "local quick spin")
+(quickplay_band_statistics
+   "Quick Spin Band Statistics")
+(solo
+   "SOLO QUICK SPIN")
+(mod_transgems "Trans Rights")
+(ugc1 "Rock Band Nickelback 1.0")
+(ugc2 "Rock Band Nickelback 2.0")
+(ugc_lost "Lost Rock Band Nickelback")
