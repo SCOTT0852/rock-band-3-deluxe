@@ -185,7 +185,7 @@
       {set $voxarrowcustomtexture TRUE}
       {set $voxarrow gdrb}
       {set $voxhwcustomtexture TRUE}
-      {set $voxhw rb3}
+      {set $voxhw gdrb}
       {set $animatedgems FALSE}
       {set $animatedgemscustomtexture FALSE}
       {set $animatedgemname none}
@@ -253,7 +253,7 @@
       {set $voxarrowcustomtexture TRUE}
       {set $voxarrow gdrb}
       {set $voxhwcustomtexture TRUE}
-      {set $voxhw rb3}
+      {set $voxhw gdrb}
       {set $animatedgems FALSE}
       {set $animatedgemscustomtexture FALSE}
       {set $animatedgemname none}
@@ -303,7 +303,7 @@
       {set $crowdmetercustomtexture TRUE}
       {set $crowdmeter rb2}
       {set $multiringcustomtexture TRUE}
-      {set $multiring rb2}
+      {set $multiring tbrb}
       {set $odbarcustomtexture TRUE}
       {set $odbar rb2}
       {set $railscustomtexture TRUE}
